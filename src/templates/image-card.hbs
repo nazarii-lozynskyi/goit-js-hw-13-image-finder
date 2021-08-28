@@ -1,0 +1,34 @@
+{{#each this}}
+  <li class='gallery-item'>
+
+    <div class='container'>
+      <img src='{{webformatURL}}' class='image' alt='...' style='width: 100%' />
+      <div class='middle'>
+        <p class='stats-item text'>
+          <i class='material-icons'>
+            <span class='material-icons'> thumb_up_alt </span>
+          </i>
+          {{likes}}
+        </p>
+        <p class='stats-item text'>
+          <i class='material-icons'>
+            <span class='material-icons'> favorite </span>
+          </i>
+          {{views}}
+        </p>
+        <p class='stats-item text'>
+          <i class='material-icons'>
+            <span class='material-icons'> comment </span>
+          </i>
+          {{comments}}
+        </p>
+        <p class='stats-item text'>
+          <i class='material-icons'>
+            <span class='material-icons'> cloud_download </span>
+          </i>
+          {{downloads}}
+        </p>
+      </div>
+    </div>
+  </li>
+{{/each}}

@@ -1,0 +1,79 @@
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+
+    object-fit: cover;
+}
+
+.middle {
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.container:hover .image {
+    opacity: 0.3;
+}
+
+.container:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    background-color: #4caf50;
+    color: white;
+    font-size: 28px;
+    padding: 10px 32px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.button.is-hidden {
+    display: none;
+}
+
+.button > .spinner.is-hidden {
+    display: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    max-width: calc(100vw - 80px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.gallery-item {
+    height: 400px;
+    overflow: hidden;
+}
+
+.gallery-item:hover {
+    cursor: pointer;
+}
+
+.gallery-item:focus {
+    cursor: pointer;
+}
