@@ -31,13 +31,17 @@ function onSearch(e) {
     return alert('aloha');
   }
   imagesApiService.resetPage();
-  imagesApiService.fetchImages().then(appendImagesMarkup);
+  imagesApiService.fetchImages().then(hits => {
+    appendImagesMarkup(hits);
+    scroll();
+  });
 }
 
 function onLoadMore() {
-  imagesApiService.fetchImages().then(appendImagesMarkup);
-
-  scroll();
+  imagesApiService.fetchImages().then(hits => {
+    appendImagesMarkup(hits);
+    scroll();
+  });
 }
 
 function appendImagesMarkup(hits) {
