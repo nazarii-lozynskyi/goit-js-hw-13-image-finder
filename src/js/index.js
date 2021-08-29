@@ -37,13 +37,7 @@ function onSearch(e) {
 function onLoadMore() {
   imagesApiService.fetchImages().then(appendImagesMarkup);
 
-  const element = document.getElementById('moreBtn');
-
-  //console.log(element);
-  element.scrollIntoView({
-    behavior: 'smooth',
-    block: 'end',
-  });
+  scroll();
 }
 
 function appendImagesMarkup(hits) {
@@ -52,4 +46,14 @@ function appendImagesMarkup(hits) {
 
 function clearGallery() {
   refs.gallery.innerHTML = '';
+}
+
+function scroll() {
+  const element = document.getElementById('moreBtn');
+
+  console.log(element);
+  element.scrollIntoView({
+    behavior: 'smooth',
+    block: 'end',
+  });
 }
